@@ -74,6 +74,20 @@ Then prove it's fixed. Un-skip the case-insensitivity test in
 npm test
 ```
 
+### Bonus bug (for fast finishers)
+
+There's a second, subtler bug in `/artwork/:id`. The lookup matches the id
+exactly, so anything slightly off 404s:
+
+```sh
+curl localhost:3000/artwork/1       # 200
+curl "localhost:3000/artwork/1%20"  # 404 — trailing space
+```
+
+Ask Claude to make the lookup tolerant of surrounding whitespace, and add a
+test. (This is a real class of bug: ids arriving from URLs, spreadsheets, or
+copy-paste often carry stray whitespace.)
+
 ## 3. Write a skill — wrap the `artwork` CLI
 
 This repo ships a small CLI (`bin/artwork.ts`) that talks to the running API:
