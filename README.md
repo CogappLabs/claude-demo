@@ -31,8 +31,8 @@ curl localhost:3000/artwork/1
 A read-only CLI over the running API (the server must be up):
 
 ```sh
-npx tsx bin/artwork.ts search Monet
-npx tsx bin/artwork.ts show 1
+npm run artwork search Monet
+npm run artwork show 1
 ```
 
 ## Scripts
@@ -44,6 +44,7 @@ npm test           # run the vitest suite
 npm run typecheck  # tsc --noEmit
 npm run check      # biome lint + format check
 npm run format     # biome check --write
+npm run artwork    # the artwork CLI (e.g. npm run artwork search Monet)
 ```
 
 ## Layout

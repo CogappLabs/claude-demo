@@ -8,7 +8,8 @@
     "start": "tsx src/server.ts",
     "typecheck": "tsc --noEmit",
     "check": "biome check .",
-    "format": "biome check --write ."
+    "format": "biome check --write .",
+    "artwork": "tsx bin/artwork.ts"
   },
   "license": "ISC",
   "type": "module",

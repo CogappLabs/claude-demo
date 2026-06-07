@@ -2,8 +2,8 @@
 /**
  * `artwork` — a tiny read-only CLI over the running artwork API.
  *
- *   artwork search <query>   GET /search?q=<query>
- *   artwork show <id>        GET /artwork/<id>
+ *   npm run artwork search <query>   GET /search?q=<query>
+ *   npm run artwork show <id>        GET /artwork/<id>
  *
  * It talks to the dev server over HTTP, so the server must be running
  * (`npm run dev`). If it cannot reach the server it prints a clear,
@@ -14,8 +14,8 @@ const PORT = process.env.PORT || "3000";
 const BASE = `http://localhost:${PORT}`;
 
 function usage(): never {
-  console.error("usage: artwork search <query>");
-  console.error("       artwork show <id>");
+  console.error("usage: npm run artwork search <query>");
+  console.error("       npm run artwork show <id>");
   process.exit(2);
 }
 

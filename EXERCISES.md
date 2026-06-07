@@ -90,11 +90,12 @@ copy-paste often carry stray whitespace.)
 
 ## 3. Write a skill — wrap the `artwork` CLI
 
-This repo ships a small CLI (`bin/artwork.ts`) that talks to the running API:
+This repo ships a small CLI (`bin/artwork.ts`, run via `npm run artwork`) that
+talks to the running API:
 
 ```sh
-npx tsx bin/artwork.ts search Monet
-npx tsx bin/artwork.ts show 1
+npm run artwork search Monet
+npm run artwork show 1
 ```
 
 Ask Claude to wrap it in a skill so it triggers from plain English:
